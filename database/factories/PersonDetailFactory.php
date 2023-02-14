@@ -17,7 +17,9 @@ class PersonDetailFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'phone' => fake()->phoneNumber(),
+            'address' => fake()->streetAddress(),
+            'avatar' => fake()->imageUrl(640, 480, 'Person', true),
         ];
     }
 }
