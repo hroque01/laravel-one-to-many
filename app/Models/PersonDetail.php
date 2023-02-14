@@ -14,4 +14,10 @@ class PersonDetail extends Model
         'address',
         'avatar',
     ];
+
+    public function person()
+    {
+        return $this->belongsTo(Person::class);
+    }
+
 }
