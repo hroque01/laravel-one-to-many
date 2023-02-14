@@ -18,8 +18,8 @@ class PersonDetailSeeder extends Seeder
     public function run()
     {
         Person::all()->each(function ($p) {
-            $pd = PersonDetail::factory()->make();
 
+            $pd = PersonDetail::factory()->make();
             $pd->person()->associate($p);
 
             $pd->save();
